@@ -1,6 +1,8 @@
 ---
 - name: HAProxy deployment playbook
   hosts: all
-  sudo: yes
+  become: yes
+  become_method: sudo
+  remote_user: root
   roles:
-    - { role: haproxy }
+    - haproxy
