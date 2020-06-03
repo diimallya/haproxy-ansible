@@ -1,0 +1,6 @@
+---
+- name: HAProxy deployment playbook
+  hosts: all
+  sudo: yes
+  roles:
+    - { role: haproxy }
